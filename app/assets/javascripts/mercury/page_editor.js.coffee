@@ -72,11 +72,6 @@ class @Mercury.PageEditor
     @regions = []
     @buildRegion(jQuery(region)) for region in jQuery("[#{Mercury.config.regions.attribute}]", @document)
     return unless @visible
-    for region in @regions
-      if region.focus
-        region.focus()
-        break
-
 
   buildRegion: (region) ->
     if region.data('region')
